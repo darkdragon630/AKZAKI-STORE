@@ -1,77 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Form</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Depnyk Store</title>
+
+
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
-  <div class="container">
-    <div class="columns">
-      <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-      <h2 class="teksinfo">Joki MCL</h2>
+  <div class="header">
+    <div class="logo">
+      <img src="Assets/DapNik.png" alt="Logo">
+      Dapnyk Store
     </div>
-    <div class="columns">
-      <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-      <h2 class="teksinfo">Coming Soon</h2>
-    </div>
-    <div class="columns">
-      <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-      <h2 class="teksinfo">Coming Soon</h2>
+    <div class="navigation">
+      <a href="#">🏠</a>
+      <a href="#">🛒</a>
+      <a href="#">👋</a>
+      <a href="#">🙍‍</a>
     </div>
   </div>
 
-  <div class="order-form">
-    <div class="container">
-      <h2>Order Form</h2>
-      <form id="orderForm">
-        <label for="name">Nama:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+  <div class="content">
+    <!--gambar -->
+    <center>
+      <div class="w3-content w3-section" style="max-width:500px">
+        <img class="mySlides" src="Assets/banner@1.png" style="width:100%">
+        <img class="mySlides" src="Assets/banner@2.png" style="width:100%">
+        <img class="mySlides" src="Assets/banner@3.png" style="width:100%">
+      </div>
+    </center>
 
-        <label for="product">Pilih Produk:</label><br>
-        <select id="product" name="product" required>
-          <option value="Joki Classic">Joki Classic</option>
-          <option value="Joki Rank">Joki Rank</option>
-          <option value="Joki MMR">Joki MMR</option>
-          <option value="Joki Paket">Joki Paket</option>
-          <option value="Joki Satuan">Joki Satuan</option>
-          <option value="Joki MCL">Joki MCL</option>
-        </select><br><br>
+     <!-- search bar -->
+    <center>
+      <div class="filters">
+      <div class="search-bar">
+        
+        <div class="search-icon teks"><ion-icon name="funnel"></ion-icon>
+ Filter <select>
+          <option value="1">All</option>
+          <option value="2">Mahal</option>
+          <option value="3">Murah</option>
+        </select>
+        </div>&ensp;
 
-        <label for="details">Detail:</label><br>
-        <textarea id="details" name="details" rows="4" required></textarea><br><br>
 
-        <button type="submit">Pesan via WhatsApp</button>
-      </form>
+        
+        <input type="text" placeholder="   Search">
+        &ensp;
+        <div class="sort-by teks"><ion-icon name="filter-circle"></ion-icon> Sort By
+          <select>
+            <option value="1">Featured</option>
+            <option value="2">A - Z</option>
+            <option value="3">Z - A</option>
+          </select>
+        </div>
+        
+      </div>
+      
     </div>
+    </center>
+
+     <!-- konten -->
+<br><br>
+
+  <center><div class="gambar">
+    
+    <div class="column">
+    <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+    <h2 class="teksinfo">Joki Classic</h2> 
+    </div>
+
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Joki Rank</h2> 
+    </div>
+
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Joki MMR</h2> 
+    </div>
+
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Joki Paket</h2> 
+    </div>
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Joki Satuan</h2> 
+    </div>
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Joki MCL</h2> 
+    </div>
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Coming Soon</h2> 
+    </div>
+
+    <div class="column">
+       <img src="Assets/Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Coming Soon</h2> 
+    </div>
+    
+      
+  </div>
+  </center>
+   
+    
+    
   </div>
 
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  
   <footer class="footer">
     <div class="footer__addr">
       <div class="logo">
-        <img src="DapNik.png" alt="Logo">
-        Akazaki Store
+        <img src="Assets/DapNik.png" alt="Logo">
+        Dapnyk Store
       </div>
-
+      
       <h2>Contact</h2>
 
       <address>
-        Sekuro, Kabupaten Jepara, Jawa Tengah<br>
-        <a class="footer__btn" href="mailto:khoirulyani48@gmail.com">Contact Us</a>
+        Jl. Raya Perjuangan 48, RW.003, Harapan Baru, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17123<br>
+
+        <a class="footer__btn" href="mailto:example@gmail.com">Contact Us</a>
       </address>
     </div>
 
     <ul class="footer__nav">
       <li class="nav__item">
         <h2 class="nav__title">All Links</h2>
+
         <ul class="nav__ul">
           <li>
             <a href="#">Home</a>
           </li>
+
           <li>
             <a href="#">Report</a>
           </li>
+
           <li>
             <a href="#">About</a>
           </li>
@@ -80,22 +163,28 @@
 
       <li class="nav__item nav__item--extra">
         <h2 class="nav__title">Our Service</h2>
+
         <ul class="nav__ul nav__ul--extra">
           <li>
             <a href="#">Joki</a>
           </li>
+
           <li>
             <a href="#">Top-up</a>
           </li>
+
           <li>
             <a href="#">Re-seller</a>
           </li>
+
           <li>
             <a href="#">Worker</a>
           </li>
+
           <li>
             <a href="#">Web Service</a>
           </li>
+
           <li>
             <a href="#">Coming Soon</a>
           </li>
@@ -104,25 +193,33 @@
 
       <li class="nav__item">
         <h2 class="nav__title">Payment</h2>
+
         <ul class="nav__ul">
           <li>
-            <img src="dana.jpg" class="pill" alt="Dana">
+            <img src="Assets/dana.jpg" class="pill" alt="Dana">
           </li>
+
           <li>
-            <img src="gopay.jpg" class="pill" alt="Gopay">
+            <img src="Assets/gopay.jpg" class="pill" alt="Gopay">
           </li>
+
+         
         </ul>
       </li>
     </ul>
 
     <div class="legal">
-      <p>Copyright © 2024 TZ_studio.to All rights reserved.</p>
+      <p>Copyright © 2023 depnyk.my.to All rights reserved.</p>
+
       <div class="legal__links">
-        <span>Made with <span class="heart">♥</span> By <strong>TZ_Net.co</strong></span>
+        <span>Made with <span class="heart">♥</span> By <strong>DappyNet.co</strong></span>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
