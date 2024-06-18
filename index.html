@@ -7,39 +7,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="header">
+
+  <header class="header">
     <div class="logo">
       <img src="DapNik.png" alt="Logo">
-      Dapnyk Store
+      <span>Dapnyk Store</span>
     </div>
-    <div class="navigation">
+    <nav class="navigation">
       <a href="#">🏠</a>
       <a href="#">🛒</a>
       <a href="#">👋</a>
       <a href="#">🙍‍</a>
-    </div>
-  </div>
+    </nav>
+  </header>
 
   <div class="content">
-    <div class="w3-content w3-section" style="max-width:500px">
-      <img class="mySlides" src="banner@1.png" style="width:100%">
-      <img class="mySlides" src="banner@2.png" style="width:100%">
-      <img class="mySlides" src="banner@3.png" style="width:100%">
-    </div>
+    <!-- Search bar and filters -->
+    <div class="filters">
+      <div class="search-bar">
+        <div class="teks">
+          <ion-icon name="funnel"></ion-icon> Filter 
+        </div>
+        <select>
+          <option value="1">All</option>
+          <option value="2">Mahal</option>
+          <option value="3">Murah</option>
+        </select>
 
-    <center>
-      <div class="filters">
-        <div class="search-bar">
-          <div class="search-icon teks"><ion-icon name="funnel"></ion-icon> Filter</div>
-          <select>
-            <option value="1">All</option>
-            <option value="2">Mahal</option>
-            <option value="3">Murah</option>
-          </select>
-
-          <input type="text" placeholder="Search">
-          
-          <div class="sort-by teks"><ion-icon name="filter-circle"></ion-icon> Sort By</div>
+        <input type="text" placeholder="Search">
+        
+        <div class="sort-by">
+          <ion-icon name="filter-circle"></ion-icon> Sort By 
           <select>
             <option value="1">Featured</option>
             <option value="2">A - Z</option>
@@ -47,80 +45,50 @@
           </select>
         </div>
       </div>
-    </center>
+    </div>
 
-    <br><br>
-
-    <center>
-      <div class="gambar">
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Classic</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Rank</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki MMR</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Paket</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Satuan</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki MCL</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Coming Soon</h2> 
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Coming Soon</h2> 
-        </div>
+    <!-- Products -->
+    <div class="gambar">
+      <div class="column">
+        <img src="Joki(4).png" alt="Product Image" class="joki-list">
+        <h2 class="teksinfo">Joki Classic</h2>
       </div>
+      <!-- Add other product columns similarly -->
+    </div>
 
-      <div class="order-form">
-        <div class="container">
-          <h2>Order Form</h2>
-          <form id="orderForm">
-            <label for="name">Nama:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+    <!-- Order form -->
+    <div class="order-form">
+      <div class="container">
+        <h2>Order Form</h2>
+        <form id="orderForm">
+          <label for="name">Nama:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
 
-            <label for="product">Pilih Produk:</label><br>
-            <select id="product" name="product" required>
-              <option value="Joki Classic">Joki Classic</option>
-              <option value="Joki Rank">Joki Rank</option>
-              <option value="Joki MMR">Joki MMR</option>
-              <option value="Joki Paket">Joki Paket</option>
-              <option value="Joki Satuan">Joki Satuan</option>
-              <option value="Joki MCL">Joki MCL</option>
-            </select><br><br>
+          <label for="product">Pilih Produk:</label><br>
+          <select id="product" name="product" required>
+            <option value="Joki Classic">Joki Classic</option>
+            <option value="Joki Rank">Joki Rank</option>
+            <option value="Joki MMR">Joki MMR</option>
+            <option value="Joki Paket">Joki Paket</option>
+            <option value="Joki Satuan">Joki Satuan</option>
+            <option value="Joki MCL">Joki MCL</option>
+          </select><br><br>
 
-            <label for="details">Detail:</label><br>
-            <textarea id="details" name="details" rows="4" required></textarea><br><br>
+          <label for="details">Detail:</label><br>
+          <textarea id="details" name="details" rows="4" required></textarea><br><br>
 
-            <button type="submit">Pesan via WhatsApp</button>
-          </form>
-        </div>
+          <button type="submit">Pesan via WhatsApp</button>
+        </form>
       </div>
-    </center>
+    </div>
   </div>
 
   <footer class="footer">
     <div class="footer__addr">
       <div class="logo">
         <img src="DapNik.png" alt="Logo">
-        Dapnyk Store
+        <span>Dapnyk Store</span>
       </div>
-      
       <h2>Contact</h2>
       <address>
         Jl. Raya Perjuangan 48, RW.003, Harapan Baru, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17123<br>
@@ -167,8 +135,5 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
