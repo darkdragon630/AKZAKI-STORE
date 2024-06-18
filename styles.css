@@ -1,0 +1,144 @@
+/* styles.css */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.joki-list {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.teksinfo {
+  text-align: center;
+}
+
+/* Order form styles */
+.order-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.order-form input[type="text"],
+.order-form textarea,
+.order-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer__addr {
+  margin-bottom: 20px;
+}
+
+.footer__addr .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer__addr .logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__nav .nav__item {
+  margin: 0 20px;
+}
+
+.footer__nav .nav__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer__nav .nav__ul {
+  padding: 0;
+}
+
+.footer__nav .nav__ul li {
+  margin-bottom: 5px;
+}
+
+.legal {
+  background-color: #222;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+.legal__links {
+  margin-top: 10px;
+}
+
+.legal__links .heart {
+  color: red;
+}
