@@ -1,10 +1,27 @@
-/* Reset and general styles */
-body, html {
+/* General reset and base styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background-color: #121b22;
   color: white;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Header styles */
@@ -13,17 +30,15 @@ body, html {
   align-items: center;
   justify-content: space-between;
   background-color: #1f2c34;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  font-weight: bold;
 }
 
-/* Header styles continued */
 .logo img {
   height: 40px;
   margin-right: 10px;
@@ -34,9 +49,7 @@ body, html {
 }
 
 .navigation a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
+  margin-left: 20px;
 }
 
 /* Content section styles */
@@ -55,13 +68,16 @@ body, html {
 
 .filters {
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .teks {
@@ -69,16 +85,9 @@ body, html {
   margin-right: 10px;
 }
 
-.teksinfo {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-
 .sort-by {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 
 .sort-by ion-icon {
@@ -100,16 +109,20 @@ body, html {
 
 .column {
   text-align: center;
-  width: 120px;
+  width: calc(33.33% - 20px);
   margin: 10px;
 }
 
 .column img {
   border-radius: 50%;
+  max-width: 100%;
+  height: auto;
 }
 
 .joki-list {
   border-radius: 18px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Order form styles */
@@ -250,6 +263,12 @@ body, html {
 }
 
 /* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .column {
+    width: calc(50% - 20px);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -259,10 +278,12 @@ body, html {
 
   .logo {
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .navigation {
     margin-top: 10px;
+    justify-content: center;
   }
 
   .navigation a {
@@ -275,22 +296,12 @@ body, html {
 
   .filters {
     padding: 15px;
-  }
-
-  .search-bar {
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 15px;
   }
 
   .sort-by {
-    margin-left: 0;
     margin-top: 10px;
-  }
-
-  .sort-by select {
-    margin-top: 5px;
-    margin-bottom: 10px;
   }
 
   .gambar {
@@ -303,4 +314,3 @@ body, html {
     margin: 10px 0;
   }
 }
-
