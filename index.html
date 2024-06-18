@@ -1,397 +1,49 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Akazaki Store</title>
-
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-  <style>
-    body {
-      background-color: #121b22;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #1f2c34;
-      color: white;
-      padding: 10px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 27px;
-      font-weight: bold;
-    }
-
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .navigation {
-      display: flex;
-      align-items: center;
-    }
-
-    .navigation a {
-      color: white;
-      margin-right: 10px;
-      text-decoration: none;
-    }
-
-    .content {
-      flex: 1;
-      padding: 20px;
-    }
-
-    .footer {
-      display: flex;
-      flex-flow: row wrap;
-      padding: 30px 30px 20px 30px;
-      color: white;
-      background-color: #1f2c34;
-      border-top: 1px solid #1f2c34;
-    }
-
-    .footer > * {
-      flex: 1 100%;
-    }
-
-    .footer__addr {
-      margin-right: 1.25em;
-      margin-bottom: 2em;
-    }
-
-    .footer__logo {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 400;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .footer__addr h2 {
-      margin-top: 1.3em;
-      font-size: 15px;
-      font-weight: 400;
-      font-weight: bold;
-    }
-
-    .nav__title {
-      font-weight: 400;
-      font-size: 15px;
-      font-weight: bold;
-    }
-
-    .footer address {
-      font-style: normal;
-      color: #999;
-    }
-
-    .footer__btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 36px;
-      max-width: max-content;
-      background-color: rgba(255, 255, 255, 0.07);
-      border-radius: 100px;
-      color: #fff;
-      line-height: 0;
-      margin: 0.6em 0;
-      font-size: 1rem;
-      padding: 0 1.3em;
-    }
-
-    .footer ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .footer li {
-      line-height: 2em;
-    }
-
-    .footer a {
-      text-decoration: none;
-    }
-
-    .footer__nav {
-      display: flex;
-      flex-flow: row wrap;
-    }
-
-    .footer__nav > * {
-      flex: 1 50%;
-      margin-right: 1.25em;
-    }
-
-    .nav__ul a {
-      color: #999;
-    }
-
-    .nav__ul--extra {
-      column-count: 2;
-      column-gap: 1.25em;
-    }
-
-    .legal {
-      display: flex;
-      flex-wrap: wrap;
-      color: #999;
-    }
-
-    .legal__links {
-      display: flex;
-      align-items: center;
-    }
-
-    .heart {
-      color: #2f2f2f;
-    }
-
-    @media screen and (min-width: 24.375em) {
-      .legal .legal__links {
-        margin-left: auto;
-      }
-    }
-
-    @media screen and (min-width: 40.375em) {
-      .footer__nav > * {
-        flex: 1;
-      }
-
-      .nav__item--extra {
-        flex-grow: 2;
-      }
-
-      .footer__addr {
-        flex: 1 0px;
-      }
-
-      .footer__nav {
-        flex: 2 0px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header {
-        flex-direction: row;
-        align-items: center;
-        padding: 20px;
-        justify-content: space-between;
-      }
-
-      .logo {
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-
-      .navigation {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .navigation a {
-        margin-bottom: 5px;
-        margin-right: 10px;
-      }
-    }
-
-    li .pill {
-      height: 35px;
-      width: 64px;
-      margin-right: 5px;
-      border-radius: 70%;
-    }
-
-    li .ig {
-      height: 30px;
-      width: 30px;
-    }
-
-    .filters {
-      padding: 30px;
-      padding-left: 30px;
-      padding-left: 34px;
-    }
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px 0;
-    }
-
-    .teks {
-      color: white;
-    }
-
-    input[type="text"] {
-      height: 25px;
-      width: 48%;
-      border: none;
-      background-color: #fefefe;
-      border-radius: 30px;
-      padding: 5px;
-    }
-
-    .select-container {
-      display: inline-flex;
-      align-items: center;
-      background-color: #121b22;
-      border: none;
-      color: white;
-    }
-
-    select {
-      border: none;
-      background-color: transparent;
-      color: white;
-    }
-
-    .column {
-      float: left;
-      width: 102px;
-      padding: 5px;
-    }
-
-    .joki-list {
-      border-radius: 18px;
-    }
-
-    .teksinfo {
-      color: white;
-      font-family: Arial, Gagalin, sans-serif;
-      font-weight: 100;
-      font-size: 1.1rem;
-    }
-
-    .mySlides {
-      display: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="header">
-    <div class="logo">
-      <img src="DapNik.png" alt="Logo">
-      Akazaki Store
+  <div class="container">
+    <div class="columns">
+      <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Joki MCL</h2>
     </div>
-    <div class="navigation">
-      <a href="#">🏠</a>
-      <a href="#">🛒</a>
-      <a href="#">👋</a>
-      <a href="#">🙍‍</a>
+    <div class="columns">
+      <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Coming Soon</h2>
+    </div>
+    <div class="columns">
+      <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
+      <h2 class="teksinfo">Coming Soon</h2>
     </div>
   </div>
 
-  <div class="content">
-    <!--gambar -->
-    <center>
-      <div class="w3-content w3-section" style="max-width:500px">
-        <img class="mySlides" src="banner@1.png" style="width:100%">
-        <img class="mySlides" src="banner@2.png" style="width:100%">
-        <img class="mySlides" src="banner@3.png" style="width:100%">
-      </div>
-    </center>
+  <div class="order-form">
+    <div class="container">
+      <h2>Order Form</h2>
+      <form id="orderForm">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-    <!-- search bar -->
-    <center>
-      <div class="filters">
-        <div class="search-bar">
-          <div class="search-icon teks"><ion-icon name="funnel"></ion-icon>
-            Filter <select>
-              <option value="1">All</option>
-              <option value="2">Mahal</option>
-              <option value="3">Murah</option>
-            </select>
-          </div>&ensp;
-          <input type="text" placeholder="   Search">
-          &ensp;
-          <div class="sort-by teks"><ion-icon name="filter-circle"></ion-icon> Sort By
-            <select>
-              <option value="1">Featured</option>
-              <option value="2">A - Z</option>
-              <option value="3">Z - A</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </center>
+        <label for="product">Pilih Produk:</label><br>
+        <select id="product" name="product" required>
+          <option value="Joki Classic">Joki Classic</option>
+          <option value="Joki Rank">Joki Rank</option>
+          <option value="Joki MMR">Joki MMR</option>
+          <option value="Joki Paket">Joki Paket</option>
+          <option value="Joki Satuan">Joki Satuan</option>
+          <option value="Joki MCL">Joki MCL</option>
+        </select><br><br>
 
-    <!-- konten -->
-    <br><br>
+        <label for="details">Detail:</label><br>
+        <textarea id="details" name="details" rows="4" required></textarea><br><br>
 
-    <center>
-      <div class="gambar">
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Classic</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Rank</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki MMR</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Paket</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki Satuan</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Joki MCL</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Coming Soon</h2>
-        </div>
-        <div class="column">
-          <img src="Joki(4).png" alt="Logo" width="100" height="100" class="joki-list">
-          <h2 class="teksinfo">Coming Soon</h2>
-        </div>
-      </div>
-    </center>
-
-    <!-- Order Form -->
-    <div class="order-form">
-      <center>
-        <form id="orderForm">
-          <label for="name" class="teks">Nama:</label><br>
-          <input type="text" id="name" name="name" required><br>
-          <label for="product" class="teks">Pilih Produk:</label><br>
-          <select id="product" name="product" required>
-            <option value="Joki Classic">Joki Classic</option>
-            <option value="Joki Rank">Joki Rank</option>
-            <option value="Joki MMR">Joki MMR</option>
-            <option value="Joki Paket">Joki Paket</option>
-            <option value="Joki Satuan">Joki Satuan</option>
-            <option value="Joki MCL">Joki MCL</option>
-          </select><br>
-          <label for="details" class="teks">Detail:</label><br>
-          <textarea id="details" name="details" rows="4" cols="50" required></textarea><br>
-          <button type="submit">Pesan via WhatsApp</button>
-        </form>
-      </center>
+        <button type="submit">Pesan via WhatsApp</button>
+      </form>
     </div>
   </div>
 
@@ -472,24 +124,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-  <script>
-    document.getElementById('orderForm').addEventListener('submit', function (event) {
-      event.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const product = document.getElementById('product').value;
-      const details = document.getElementById('details').value;
-      
-      const whatsappNumber = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
-      const message = `Halo, saya ingin memesan ${product}. \n\nNama: ${name}\nDetail: ${details}`;
-      const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-      
-      window.open(whatsappURL, '_blank');
-    });
-  </script>
 </body>
 </html>
-
