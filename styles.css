@@ -10,6 +10,7 @@ body {
   background-color: #121b22;
   color: white;
   line-height: 1.6;
+  margin: 0;
 }
 
 .header {
@@ -32,6 +33,10 @@ body {
   margin-right: 10px;
 }
 
+.navigation {
+  display: flex;
+}
+
 .navigation a {
   color: white;
   text-decoration: none;
@@ -50,7 +55,8 @@ body {
   margin-bottom: 20px;
 }
 
-.search-bar {
+.search-bar,
+.sort-by {
   display: flex;
   align-items: center;
   background-color: #1f2c34;
@@ -66,15 +72,6 @@ body {
   background-color: #fefefe;
   border-radius: 30px;
   padding: 5px 10px;
-}
-
-.sort-by {
-  display: flex;
-  align-items: center;
-  background-color: #1f2c34;
-  padding: 10px;
-  border-radius: 30px;
-  margin-left: 10px;
 }
 
 .sort-by select {
@@ -106,6 +103,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .order-form h2 {
