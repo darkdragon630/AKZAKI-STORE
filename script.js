@@ -1,24 +1,19 @@
-var myIndex = 0;
-carousel();
+// script.js
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 5000); // Change image every 2 seconds
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const orderForm = document.getElementById('orderForm');
 
+  orderForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-const filterText = document.getElementById('filterText');
-const filterSelect = document.getElementById('filterSelect');
+    const name = document.getElementById('name').value;
+    const product = document.getElementById('product').value;
+    const details = document.getElementById('details').value;
 
-filterSelect.addEventListener('change', () => {
-  const selectedOption = filterSelect.options[filterSelect.selectedIndex];
-  filterText.textContent = `Filter ${selectedOption.textContent} v`;
+    const whatsappNumber = '6287840912524'; // Ganti dengan nomor WhatsApp Anda
+    const message = `Halo, saya ingin memesan ${product}. \n\nNama: ${name}\nDetail: ${details}`;
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, '_blank');
+  });
 });
-
